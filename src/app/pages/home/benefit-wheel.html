@@ -1,0 +1,28 @@
+<div class="stick">
+<div class="wheel" (pointerdown)="down($event)" (pointerup)="up($event)" (pointercancel)="startX = null">
+  <ul class="wheel__track">
+    @for (c of view(); track c.title) {
+      <li class="wi" [class.is-active]="c.isActive" [style.--rel]="c.rel" [style.--z]="c.z" [style.--n]="total()" [style.--tone]="c.tone" [style.--shade]="c.shade"
+          [attr.aria-hidden]="Math.abs(c.i - active()) > 2 ? 'true' : null">
+        <article class="wi__card">
+          <span class="wi__num" aria-hidden="true">{{ c.num }}</span>
+          <span class="wi__icon"><app-icon [name]="c.icon" [size]="34" /></span>
+          <div class="wi__body">
+            <h3 class="wi__title">{{ c.title }}</h3>
+            <p class="wi__text">{{ c.text }}</p>
+            <a class="wi__more" [routerLink]="c.link" [attr.tabindex]="c.isActive ? 0 : -1">Learn more <app-icon name="arrow-right" [size]="16" /></a>
+          </div>
+          @if (!c.isActive) {
+            <button type="button" class="wi__pick" (click)="pick(c.i)" [attr.aria-label]="'Show ' + c.title"></button>
+          }
+        </article>
+      </li>
+    }
+  </ul>
+</div>
+<div class="wheel__nav">
+  <button type="button" class="wheel__btn" (click)="go(-1)" [disabled]="active() === 0" aria-label="Previous service">←</button>
+  <span class="wheel__count" aria-live="polite"><b>{{ view()[active()].num }}</b> / {{ total() < 10 ? '0' + total() : total() }}</span>
+  <button type="button" class="wheel__btn" (click)="go(1)" [disabled]="active() === total() - 1" aria-label="Next service">→</button>
+</div>
+</div>

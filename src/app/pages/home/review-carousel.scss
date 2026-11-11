@@ -1,0 +1,19 @@
+:host { display: block; }
+.stage { --w: min(21rem, 78vw); position: relative; height: 27.5rem; overflow: hidden; touch-action: pan-y; user-select: none; perspective: 1200px;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+ul { list-style: none; margin: 0; padding: 0; }
+.slide { --rel: 0; --abs: 0; position: absolute; top: .5rem; left: 50%; width: var(--w); margin-left: calc(var(--w) * -.5);
+  transform: translateX(calc(var(--rel) * 78%)) translateZ(calc(var(--abs) * -140px)) scale(calc(1 - var(--abs) * .1));
+  opacity: calc(1 - var(--abs) * .38); z-index: calc(10 - var(--abs)); filter: saturate(calc(1 - var(--abs) * .35));
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1), opacity .5s ease, filter .5s ease; }
+.slide[style*='--abs: 3'], .slide[style*='--abs: 4'] { visibility: hidden; opacity: 0; }
+.slide.is-active { filter: drop-shadow(0 1.6rem 2rem color-mix(in srgb, var(--color-primary) 35%, transparent)); }
+.pick { position: absolute; inset: 0; z-index: 4; border: 0; background: none; cursor: pointer; border-radius: 1.25rem; }
+.nav { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: .25rem; }
+.arrow { width: 2.75rem; height: 2.75rem; border-radius: 50%; cursor: pointer; font-size: 1.1rem; font-weight: 700; color: var(--color-primary); background: var(--color-surface); border: 1.5px solid color-mix(in srgb, var(--color-primary) 30%, transparent); transition: background .25s, color .25s, transform .25s;
+  &:hover { background: var(--color-primary); color: var(--color-on-primary); transform: translateY(-2px); } &:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; } }
+.dots { display: flex; gap: .5rem; }
+.dot { width: .75rem; height: .75rem; padding: 0; border-radius: 999px; cursor: pointer; background: var(--color-surface); border: 1.5px solid var(--color-primary); transition: width .35s ease, background .25s ease;
+  &.on { width: 1.9rem; background: var(--color-primary); } &:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; } }
+@media (max-width: 639px) { .slide { transform: translateX(calc(var(--rel) * 92%)) scale(calc(1 - var(--abs) * .1)); } }
+@media (prefers-reduced-motion: reduce) { .slide, .dot { transition: none; } }

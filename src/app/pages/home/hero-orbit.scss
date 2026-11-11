@@ -1,0 +1,43 @@
+:host { display: block; position: relative; z-index: 2; }
+.orbit { display: grid; gap: 1.25rem; justify-items: center; }
+.stage { position: relative; width: min(100%, 34rem); aspect-ratio: 1; }
+
+.blob { position: absolute; inset: 6%; border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, color-mix(in srgb, var(--h-water) 10%, #fff), color-mix(in srgb, var(--h-water) 32%, #fff) 72%);
+  box-shadow: inset 0 0 5rem rgb(255 255 255 / .55); animation: orbit-float 6s ease-in-out infinite alternate; }
+.arc { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.arc path { fill: none; stroke: color-mix(in srgb, var(--h-ink) 30%, transparent); stroke-width: 1.6; stroke-dasharray: 2 10; stroke-linecap: round; }
+
+.dish {
+  position: absolute; width: 17%; aspect-ratio: 1; padding: 0; border: 0; background: none; cursor: pointer; z-index: 15;
+  transform: translate(-50%, -50%) scale(var(--s, 1));
+  transition: left .75s cubic-bezier(.65, 0, .35, 1), top .75s cubic-bezier(.65, 0, .35, 1), transform .75s cubic-bezier(.65, 0, .35, 1);
+  img { width: 100%; height: 100%; border-radius: 50%; object-fit: contain; display: block; padding: 10%; background: #fff;
+    box-shadow: 0 0 0 .3rem rgb(255 255 255 / .92), 0 .6rem 1.5rem -.5rem color-mix(in srgb, var(--h-ink) 40%, transparent);
+    transition: box-shadow .3s ease; }
+  &:not(.is-main):hover img { box-shadow: 0 0 0 .3rem #fff, 0 1rem 2rem -.4rem color-mix(in srgb, var(--h-ink) 50%, transparent); }
+  &:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 6px; border-radius: 50%; }
+}
+.dish.is-main { z-index: 20; cursor: default; img { padding: 8%; box-shadow: 0 0 .15rem .12rem rgb(255 255 255 / .95), 0 1.6rem 2.4rem -.8rem color-mix(in srgb, var(--h-ink) 45%, transparent); } }
+.ring { position: absolute; inset: -6%; border-radius: 50%; border: 1.5px solid var(--color-primary); opacity: 0; transform: scale(.85); transition: opacity .35s ease, transform .35s ease; }
+.is-main .ring { opacity: 1; transform: scale(1); }
+
+.note { margin: -.25rem 0 0; position: relative; z-index: 30; display: flex; align-items: center; gap: .6rem; white-space: nowrap;
+  padding: .55rem 1.1rem; border-radius: 100px; font-size: .78rem; font-weight: 600; color: var(--h-ink);
+  background: rgb(255 255 255 / .75); backdrop-filter: blur(10px); border: 1px solid rgb(255 255 255 / .8); box-shadow: 0 .7rem 1.8rem -.6rem rgb(15 23 42 / .2); }
+.dot { width: .45rem; height: .45rem; border-radius: 50%; background: var(--color-primary); box-shadow: 0 0 0 .25rem color-mix(in srgb, var(--color-primary) 25%, transparent); }
+
+.caption { width: min(100%, 30rem); text-align: center; padding: 1rem 1.25rem; border-radius: 1.25rem; background: rgb(255 255 255 / .82); backdrop-filter: blur(10px); border: 1px solid rgb(255 255 255 / .9); box-shadow: 0 1rem 2.5rem -1.2rem rgb(15 23 42 / .25); }
+.caption__body { animation: cap-in .5s cubic-bezier(.2, .7, .2, 1) both; min-height: 7.5rem; }
+.caption__name { margin: 0 0 .15rem; font-size: clamp(1.25rem, 1rem + 1vw, 1.6rem); color: var(--h-ink); }
+.caption__price { margin: 0 0 .4rem; font-weight: 700; color: var(--color-primary); }
+.caption__text { margin: 0 0 .6rem; color: var(--color-text-muted); font-size: .95rem; }
+.caption__link { display: inline-flex; align-items: center; gap: .35rem; font-weight: 600; color: var(--color-primary); }
+.caption__nav { display: flex; align-items: center; justify-content: center; gap: 1.25rem; margin-top: .75rem; font-size: .85rem; color: var(--color-text-muted);
+  b { color: var(--h-ink); }
+  button { border: 0; background: none; cursor: pointer; font: inherit; font-weight: 600; color: var(--h-ink); opacity: .65; transition: opacity .2s; &:hover, &:focus-visible { opacity: 1; } } }
+
+@keyframes orbit-float { to { transform: translateY(.6rem); } }
+@keyframes cap-in { from { opacity: 0; transform: translateY(.7rem); } }
+@media (max-width: 899px) { .dish { width: 19%; } }
+@media (prefers-reduced-motion: reduce) { .dish, .ring { transition: none; } .blob, .caption__body { animation: none; } }

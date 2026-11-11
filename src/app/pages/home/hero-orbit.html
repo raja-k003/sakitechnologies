@@ -1,0 +1,43 @@
+<div class="orbit">
+  <div class="stage">
+    <span class="blob" aria-hidden="true"></span>
+    <svg class="arc" viewBox="0 0 640 640" aria-hidden="true"><path d="M 410 50 C 640 120, 640 520, 410 590" /></svg>
+
+    @for (p of items(); track p.slug; let i = $index) {
+      @let pos = this.pos(i);
+      <button
+        type="button"
+        class="dish"
+        [class.is-main]="i === active()"
+        [style.left.%]="pos.left"
+        [style.top.%]="pos.top"
+        [style.--s]="pos.scale"
+        [attr.aria-current]="i === active() ? 'true' : null"
+        [attr.tabindex]="i === active() ? -1 : 0"
+        [attr.aria-label]="i === active() ? p.name + ' (selected)' : 'Show ' + p.name"
+        (click)="select(i)"
+      >
+        <span class="ring"></span>
+        <img [src]="p.image.src" alt="" width="400" height="500" [attr.loading]="i === 0 ? 'eager' : 'lazy'" decoding="async" />
+      </button>
+    }
+
+  </div>
+  <p class="note"><span class="dot"></span>Tap a product to explore</p>
+
+  <div class="caption" aria-live="polite">
+    @for (p of [current()]; track p.slug) {
+      <div class="caption__body">
+        <h2 class="caption__name">{{ p.name }}</h2>
+        @if (p.fromPrice) { <p class="caption__price">From {{ p.fromPrice | inr }}</p> }
+        <p class="caption__text">{{ p.summary }}</p>
+        <a class="caption__link" [routerLink]="['/products', p.slug]">View {{ p.name.toLowerCase() }} <app-icon name="arrow-right" [size]="16" /></a>
+      </div>
+    }
+    <div class="caption__nav">
+      <span class="caption__count"><b>{{ counter() }}</b> / {{ total() < 10 ? '0' + total() : total() }}</span>
+      <button type="button" (click)="step(-1)" aria-label="Previous product">← Previous</button>
+      <button type="button" (click)="step(1)" aria-label="Next product">Next →</button>
+    </div>
+  </div>
+</div>

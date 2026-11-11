@@ -1,0 +1,63 @@
+:host { --fw: 17rem; --fh: 23rem; position: relative; display: flex; justify-content: var(--fc-just, center); height: var(--fh); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.fc {
+  --tone: 0; --shade: 12;
+  --mix: color-mix(in srgb, var(--color-accent, var(--color-primary)) calc(var(--tone) * 1%), var(--color-primary));
+  --c1: color-mix(in srgb, var(--mix), #000 calc(var(--shade) * 1%));
+  --c2: color-mix(in srgb, var(--c1) 70%, #000);
+  position: relative; flex: none; width: var(--fw); height: var(--fh); border-radius: .5rem; background: rgb(0 0 0 / .05);
+  box-shadow: 0 1.6rem 3rem -1.6rem color-mix(in srgb, var(--c1) 70%, transparent);
+  transition: width 1s ease, box-shadow 1s ease, translate .4s ease;
+}
+:host(.is-open) { z-index: 10; }
+:host(.is-open) .fc { width: calc(var(--fw) * 2); box-shadow: 0 2rem 3.5rem -1.6rem color-mix(in srgb, var(--c1) 85%, transparent); }
+.fc:hover:not(:has(.fc__cover:hover)) { translate: 0 -2px; }
+
+/* inside page (revealed when the cover opens) */
+.fc__inside {
+  position: absolute; right: 0; top: 0; z-index: 1; width: var(--fw); height: 100%; padding: 1.25rem 1.1rem; border-radius: 0 .5rem .5rem 0;
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: .6rem; overflow: hidden;
+  background: var(--color-surface, #fafbfa); box-shadow: inset 17rem 0 5rem -2.5rem rgb(0 0 0 / .25); transition: box-shadow 1s ease;
+}
+:host(.is-open) .fc__inside { box-shadow: inset 1rem 0 5rem -2.5rem rgb(0 0 0 / .1); }
+.fc__inside::before { content: ''; position: absolute; inset: 0 0 auto; height: .3rem; background: linear-gradient(90deg, var(--c1), var(--mix)); }
+.fc__pill { padding: .2rem .7rem; border-radius: 999px; font-size: .75rem; font-weight: 700; color: var(--c1); background: color-mix(in srgb, var(--c1) 12%, transparent); }
+.fc__inside-title { margin: 0; font-size: 1.05rem; font-weight: 800; color: var(--c1); }
+.fc__text { margin: 0; font-size: .86rem; line-height: 1.5; color: var(--color-text-muted, #475569); display: -webkit-box; -webkit-line-clamp: 4; line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.fc__points { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; font-size: .8rem; font-weight: 600; text-align: left; color: var(--color-text, #0f172a);
+  li { display: flex; gap: .45rem; align-items: flex-start; line-height: 1.3; } app-icon { color: var(--c1); flex: none; margin-top: .1rem; } }
+.fc__btn { margin-top: auto; position: relative; z-index: 0; overflow: hidden; width: 100%; padding: .6rem .75rem; border: 2px solid var(--c1); border-radius: .5rem; font-weight: 700; font-size: .9rem; text-decoration: none; color: var(--c1); transition: color .3s ease;
+  &::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--c1); transform: scaleY(0); transform-origin: bottom; transition: transform .3s ease; }
+  &:hover, &:focus-visible { color: var(--color-on-primary, #fff); &::before { transform: scaleY(1); } } }
+
+/* flipping cover */
+.fc__flip { position: absolute; right: 0; top: 0; z-index: 100; width: var(--fw); height: 100%; perspective: 100rem; pointer-events: none; }
+.fc__cover { position: absolute; inset: 0; transform-origin: left; transform-style: preserve-3d; transition: transform 1s ease; pointer-events: auto; }
+:host(.is-open) .fc__cover { transform: rotateY(-180deg); }
+.fc__front, .fc__back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: .5rem; overflow: hidden; }
+.fc__front { background: var(--color-surface, #fafbfa); display: flex; flex-direction: column; }
+.fc__top { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .25rem; padding: 1rem; padding-bottom: 1.5rem; color: var(--color-on-primary, #fff); text-align: center;
+  position: relative; background: radial-gradient(circle at 18% 8%, color-mix(in srgb, #fff 26%, transparent), transparent 46%), linear-gradient(160deg, color-mix(in srgb, var(--c1) 88%, #fff), var(--c1) 45%, var(--c2)); clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%); }
+.fc__top::before, .fc__top::after { content: ''; position: absolute; border-radius: 50%; border: 1.5px solid rgb(255 255 255 / .22); pointer-events: none; }
+.fc__top::before { width: 11rem; height: 11rem; right: -4rem; top: -4rem; }
+.fc__top::after { width: 7rem; height: 7rem; left: -2.5rem; bottom: 1.5rem; background: rgb(255 255 255 / .06); }
+.fc__view app-icon { transition: translate .3s ease; }
+.fc__cover:hover .fc__view app-icon { translate: .3rem 0; }
+.fc__icon { margin-bottom: .45rem; padding: .7rem; box-sizing: content-box; border-radius: 50%; background: rgb(255 255 255 / .16); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .3), 0 .6rem 1.2rem -.4rem rgb(0 0 0 / .35); }
+.fc__title { margin: 0; font-size: 1.25rem; line-height: 1.2; color: inherit; }
+.fc__price { margin: 0; font-size: 1rem; font-weight: 600; opacity: .95; }
+.fc__view { display: flex; align-items: center; justify-content: center; gap: .4rem; border: 0; background: linear-gradient(to bottom, color-mix(in srgb, var(--c1) 7%, #fff), #fff); cursor: pointer; font: inherit; font-weight: 800; font-size: 1.05rem; color: var(--c1); padding: .75rem 1rem 1rem;
+  &:focus-visible { outline: 3px solid var(--c1); outline-offset: -6px; border-radius: .5rem; } }
+.fc__back { transform: rotateY(180deg); background: radial-gradient(circle at 50% 60%, color-mix(in srgb, var(--c1) 14%, #fff), color-mix(in srgb, var(--c1) 48%, #fff));
+  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+  img { width: 100%; height: 100%; object-fit: contain; padding: 12%; filter: drop-shadow(0 1rem 1rem rgb(0 0 0 / .25)); } }
+
+/* small screens: no widening; the cover simply swings away */
+@media (max-width: 639px) {
+  :host { --fw: min(100%, 20rem); justify-content: center; }
+  :host(.is-open) .fc { width: var(--fw); }
+  .fc { width: var(--fw); }
+  :host(.is-open) .fc__cover { transform: rotateY(-110deg); opacity: 0; transition: transform .8s ease, opacity .5s ease .2s; }
+}
+@media (prefers-reduced-motion: reduce) { .fc, .fc__cover, .fc__inside { transition: none; } }
