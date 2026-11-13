@@ -1,4 +1,4 @@
-import { image, SiteImage } from './images';
+import { SiteImage } from './images';
 
 export type ProductCategory = 'softeners' | 'filters' | 'purifiers';
 
@@ -71,7 +71,7 @@ export const PRODUCTS: Product[] = [
       { model: 'SF 90A', operation: 'Automatic', mrp: 150200 },
       { model: 'SF 140A', operation: 'Automatic', mrp: 210900 },
     ],
-    image: image('water-softener', 'Saki Technologies water softener vessel with control valve'),
+    image: { src: '/assets/products/water-softener.webp', alt: 'Saki Technologies water softener vessel with control valve' },
     related: ['purolite-softener-resin', 'sand-filters', 'iron-filters'],
     faqs: [
       { q: 'Which softener size do I need?', a: 'It depends on your daily water use and the hardness of your supply. We test your water on site and recommend a model; smaller homes usually suit the 20 or 30 series, apartments and villas the larger series.' },
@@ -95,7 +95,7 @@ export const PRODUCTS: Product[] = [
     features: ['Premium food-grade resin', 'Rated for up to 1500 ppm hardness', 'Anti-scalant resin'],
     highlightsTitle: 'Features of resin',
     highlights: ['Premium food-grade resin', '1500 PPM hardness', 'Anti-scalant resin'],
-    image: image('purolite-softener-resin', 'Purolite ion-exchange water softener resin beads'),
+    image: { src: '/assets/products/softener-resin.webp', alt: 'Purolite ion-exchange water softener resin beads' },
     related: ['water-softeners', 'sand-filters'],
     faqs: [{ q: 'When should resin be replaced?', a: 'If softened water starts leaving scale again even after regular recharging, the resin may be exhausted or fouled. We can test it and replace it on site.' }],
   },
@@ -120,7 +120,7 @@ export const PRODUCTS: Product[] = [
       { model: 'SF 20M', operation: 'Manual', mrp: 29000 },
       { model: 'SF 20A', operation: 'Automatic', mrp: 39400 },
     ],
-    image: image('sand-filter', 'Saki Technologies multi-grade sand filter vessel'),
+    image: { src: '/assets/products/sand-filter.webp', alt: 'Saki Technologies multi-grade sand filter vessel' },
     related: ['iron-filters', 'carbon-filters', 'water-softeners'],
     faqs: [{ q: 'Do I need a sand filter before a softener?', a: 'If your water is muddy or carries silt, yes. Removing particles first protects the softener resin and keeps it working efficiently.' }],
   },
@@ -142,7 +142,7 @@ export const PRODUCTS: Product[] = [
     highlightsTitle: 'Benefits of iron filter',
     highlights: ['Appliance protection', 'Stain prevention', 'Odour elimination', 'No recurring cost', 'Low recharge frequency', 'Softens excessive hardness'],
     removes: ['Dissolved iron', 'Manganese'],
-    image: image('iron-filter', 'Saki Technologies iron removal filter for borewell water'),
+    image: { src: '/assets/products/iron-filter.webp', alt: 'Saki Technologies iron removal filter for borewell water' },
     related: ['sand-filters', 'water-softeners', 'carbon-filters'],
     faqs: [{ q: 'How do I know if my water has iron?', a: 'Yellow or brown stains on white buckets and tiles, a metallic taste or smell, and water that turns cloudy after standing are common signs. We test iron levels on site.' }],
   },
@@ -164,7 +164,7 @@ export const PRODUCTS: Product[] = [
     highlightsTitle: 'Benefits of carbon filter',
     highlights: ['Chemical removal', 'Odour reduction', 'Improved taste', 'No recurring cost', 'Low recharge frequency', 'Softens excessive hardness'],
     removes: ['Odour and bad taste', 'Colour', 'Chlorine', 'Organic chemicals', 'Some pesticides'],
-    image: image('carbon-filter', 'Saki Technologies activated carbon filter vessel'),
+    image: { src: '/assets/products/carbon-filter.webp', alt: 'Saki Technologies activated carbon filter vessel' },
     related: ['sand-filters', 'iron-filters', 'water-softeners'],
     faqs: [{ q: 'Does a carbon filter make water safe to drink?', a: 'A carbon filter improves taste and odour and removes many chemicals, but it does not remove dissolved salts or all microorganisms. For drinking water we recommend an RO + UV purifier.' }],
   },

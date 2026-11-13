@@ -92,7 +92,7 @@ export const PAGES = {
   careers: {
     path: '/careers',
     title: 'Careers – Join Our Team in Chennai',
-    description: 'Full-time openings at Saki Technologies in Chennai: customer service, technical support, marketing and operations.',
+    description: 'Saki Technologies in Chennai is not hiring right now. Send us your details and we will keep them on file for future openings.',
     indexable: true,
     changefreq: 'monthly',
     priority: 0.4,

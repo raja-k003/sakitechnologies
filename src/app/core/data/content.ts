@@ -76,12 +76,12 @@ export interface Testimonial {
 }
 
 export const TESTIMONIALS: Testimonial[] = [
-  { name: 'Karthika', avatar: { gender: 'f', skin: '#b9774f', hair: '#1d1410', cloth: '#d9487b' }, quote: 'Life-changing! Soft water improved my skin and appliances. The water softener’s quality exceeded my expectations — a must-have for every household.' },
-  { name: 'Kayal Vizhi', avatar: { gender: 'f', skin: '#a86a45', hair: '#17100d', cloth: '#0f9d8a' }, quote: 'Soft water made a huge difference at home. The softener’s efficiency and durability are unmatched. Highly recommended!' },
-  { name: 'Murugan', avatar: { gender: 'm', skin: '#8a5636', hair: '#16100d', cloth: '#3558d6', stache: true }, quote: 'An incredible impact on our laundry and plumbing. A small investment brought a significant positive change.' },
-  { name: 'Anitha Kumar', avatar: { gender: 'f', skin: '#c2855c', hair: '#221611', cloth: '#e0932a' }, quote: 'This water softener exceeded expectations. Showering is a delight now and my skin thanks me. A must for every home.' },
-  { name: 'Ashok Kumar', avatar: { gender: 'm', skin: '#9c6340', hair: '#1a1411', cloth: '#2f8f5b', glasses: true }, quote: 'Clear water and our appliances are working well. The softener has exceeded our expectations.' },
-  { name: 'Shalini Natarajan', avatar: { gender: 'f', skin: '#b17a52', hair: '#1b130f', cloth: '#7a4fd1' }, quote: 'We noticed the improvement immediately — no more scale build-up on taps and tiles. Top-notch softener.' },
+  { name: 'Meenakshi Sundaram', avatar: { gender: 'f', skin: '#b9774f', hair: '#1d1410', cloth: '#d9487b' }, quote: 'Life-changing! Soft water improved my skin and appliances. The water softener’s quality exceeded my expectations — a must-have for every household.' },
+  { name: 'Thamarai Selvi', avatar: { gender: 'f', skin: '#a86a45', hair: '#17100d', cloth: '#0f9d8a' }, quote: 'Soft water made a huge difference at home. The softener’s efficiency and durability are unmatched. Highly recommended!' },
+  { name: 'Senthil Vel', avatar: { gender: 'm', skin: '#8a5636', hair: '#16100d', cloth: '#3558d6', stache: true }, quote: 'An incredible impact on our laundry and plumbing. A small investment brought a significant positive change.' },
+  { name: 'Priya Dharshini', avatar: { gender: 'f', skin: '#c2855c', hair: '#221611', cloth: '#e0932a' }, quote: 'This water softener exceeded expectations. Showering is a delight now and my skin thanks me. A must for every home.' },
+  { name: 'Rajesh Annamalai', avatar: { gender: 'm', skin: '#9c6340', hair: '#1a1411', cloth: '#2f8f5b', glasses: true }, quote: 'Clear water and our appliances are working well. The softener has exceeded our expectations.' },
+  { name: 'Janani Ramesh', avatar: { gender: 'f', skin: '#b17a52', hair: '#1b130f', cloth: '#7a4fd1' }, quote: 'We noticed the improvement immediately — no more scale build-up on taps and tiles. Top-notch softener.' },
 ];
 
 export interface Faq {
@@ -119,12 +119,7 @@ export interface JobOpening {
   summary: string;
 }
 
-export const JOB_OPENINGS: JobOpening[] = [
-  { title: 'Customer Service Representative', type: 'Full time', summary: 'Be the first point of contact for customers: answer enquiries, schedule visits and follow up after installation.' },
-  { title: 'Technical Support Engineer', type: 'Full time', summary: 'Install, service and troubleshoot water softeners, filters and RO purifiers at customer sites.' },
-  { title: 'Marketing Specialist', type: 'Full time', summary: 'Plan local campaigns, manage social channels and grow awareness of Saki Technologies across Chennai.' },
-  { title: 'Operations Coordinator', type: 'Full time', summary: 'Coordinate stock, scheduling and field teams so every installation runs on time.' },
-];
+export const JOB_OPENINGS: JobOpening[] = [];
 
 export interface GalleryItem {
   image: SiteImage;
@@ -132,16 +127,38 @@ export interface GalleryItem {
 }
 
 export const GALLERY: GalleryItem[] = [
-  { image: image('terrace-softener-installation', 'Saki Technologies softener vessel and blue pre-filter installed on a terrace'), caption: 'Terrace installation' },
-  { image: image('technician-twin-vessel-installation', 'Saki Technologies technician beside a twin-vessel installation'), caption: 'Twin-vessel system, ready to commission' },
-  { image: image('twin-filter-vessels-utility-area', 'Two Saki Technologies vessels with control valves in a utility area'), caption: 'Twin vessels in a utility area' },
-  { image: image('saki-team-installation', 'Saki Technologies team beside a newly installed water softener'), caption: 'Our team at a completed installation' },
-  { image: image('softener-with-brine-tank', 'Saki Technologies softener vessel beside its blue brine tank'), caption: 'Softener with brine tank' },
-  { image: image('sand-filter-and-softener-pair', 'Sand filter and water softener installed side by side'), caption: 'Sand filter and softener pair' },
-  { image: image('twin-vessels-with-pre-filters', 'Two Saki Technologies vessels with blue cartridge pre-filters'), caption: 'Vessels with cartridge pre-filters' },
-  { image: image('indoor-softener-and-filter', 'Softener, filter, pre-filter and brine tank installed indoors'), caption: 'Indoor softener and filter' },
-  { image: image('twin-vessels-covered-shed', 'Twin vessels with pipework installed in a covered shed'), caption: 'Installation in a covered shed' },
-  { image: image('cabinet-softener-installation', 'Cabinet-style water softener and blue filter installed by Saki Technologies'), caption: 'Cabinet softener installation' },
+  { image: { src: '/assets/activity/activity-01.webp', alt: 'Saki Technologies completed water treatment installation, photo 1' }, caption: 'Completed installation 1' },
+  { image: { src: '/assets/activity/activity-02.webp', alt: 'Saki Technologies completed water treatment installation, photo 2' }, caption: 'Completed installation 2' },
+  { image: { src: '/assets/activity/activity-03.webp', alt: 'Saki Technologies completed water treatment installation, photo 3' }, caption: 'Completed installation 3' },
+  { image: { src: '/assets/activity/activity-04.webp', alt: 'Saki Technologies completed water treatment installation, photo 4' }, caption: 'Completed installation 4' },
+  { image: { src: '/assets/activity/activity-05.webp', alt: 'Saki Technologies completed water treatment installation, photo 5' }, caption: 'Completed installation 5' },
+  { image: { src: '/assets/activity/activity-06.webp', alt: 'Saki Technologies completed water treatment installation, photo 6' }, caption: 'Completed installation 6' },
+  { image: { src: '/assets/activity/activity-07.webp', alt: 'Saki Technologies completed water treatment installation, photo 7' }, caption: 'Completed installation 7' },
+  { image: { src: '/assets/activity/activity-08.webp', alt: 'Saki Technologies completed water treatment installation, photo 8' }, caption: 'Completed installation 8' },
+  { image: { src: '/assets/activity/activity-09.webp', alt: 'Saki Technologies completed water treatment installation, photo 9' }, caption: 'Completed installation 9' },
+  { image: { src: '/assets/activity/activity-10.webp', alt: 'Saki Technologies completed water treatment installation, photo 10' }, caption: 'Completed installation 10' },
+  { image: { src: '/assets/activity/activity-11.webp', alt: 'Saki Technologies completed water treatment installation, photo 11' }, caption: 'Completed installation 11' },
+  { image: { src: '/assets/activity/activity-12.webp', alt: 'Saki Technologies completed water treatment installation, photo 12' }, caption: 'Completed installation 12' },
+  { image: { src: '/assets/activity/activity-13.webp', alt: 'Saki Technologies completed water treatment installation, photo 13' }, caption: 'Completed installation 13' },
+  { image: { src: '/assets/activity/activity-14.webp', alt: 'Saki Technologies completed water treatment installation, photo 14' }, caption: 'Completed installation 14' },
+  { image: { src: '/assets/activity/activity-15.webp', alt: 'Saki Technologies completed water treatment installation, photo 15' }, caption: 'Completed installation 15' },
+  { image: { src: '/assets/activity/activity-16.webp', alt: 'Saki Technologies completed water treatment installation, photo 16' }, caption: 'Completed installation 16' },
+  { image: { src: '/assets/activity/activity-17.webp', alt: 'Saki Technologies completed water treatment installation, photo 17' }, caption: 'Completed installation 17' },
+  { image: { src: '/assets/activity/activity-18.webp', alt: 'Saki Technologies completed water treatment installation, photo 18' }, caption: 'Completed installation 18' },
+  { image: { src: '/assets/activity/activity-19.webp', alt: 'Saki Technologies completed water treatment installation, photo 19' }, caption: 'Completed installation 19' },
+  { image: { src: '/assets/activity/activity-20.webp', alt: 'Saki Technologies completed water treatment installation, photo 20' }, caption: 'Completed installation 20' },
+  { image: { src: '/assets/activity/activity-21.webp', alt: 'Saki Technologies completed water treatment installation, photo 21' }, caption: 'Completed installation 21' },
+  { image: { src: '/assets/activity/activity-22.webp', alt: 'Saki Technologies completed water treatment installation, photo 22' }, caption: 'Completed installation 22' },
+  { image: { src: '/assets/activity/activity-23.webp', alt: 'Saki Technologies completed water treatment installation, photo 23' }, caption: 'Completed installation 23' },
+  { image: { src: '/assets/activity/activity-24.webp', alt: 'Saki Technologies completed water treatment installation, photo 24' }, caption: 'Completed installation 24' },
+  { image: { src: '/assets/activity/activity-25.webp', alt: 'Saki Technologies completed water treatment installation, photo 25' }, caption: 'Completed installation 25' },
+  { image: { src: '/assets/activity/activity-26.webp', alt: 'Saki Technologies completed water treatment installation, photo 26' }, caption: 'Completed installation 26' },
+  { image: { src: '/assets/activity/activity-27.webp', alt: 'Saki Technologies completed water treatment installation, photo 27' }, caption: 'Completed installation 27' },
+  { image: { src: '/assets/activity/activity-28.webp', alt: 'Saki Technologies completed water treatment installation, photo 28' }, caption: 'Completed installation 28' },
+  { image: { src: '/assets/activity/activity-29.webp', alt: 'Saki Technologies completed water treatment installation, photo 29' }, caption: 'Completed installation 29' },
+  { image: { src: '/assets/activity/activity-30.webp', alt: 'Saki Technologies completed water treatment installation, photo 30' }, caption: 'Completed installation 30' },
+  { image: { src: '/assets/activity/activity-31.webp', alt: 'Saki Technologies completed water treatment installation, photo 31' }, caption: 'Completed installation 31' },
+  { image: { src: '/assets/activity/activity-32.webp', alt: 'Saki Technologies completed water treatment installation, photo 32' }, caption: 'Completed installation 32' },
 ];
 
 export interface GalleryVideo {
@@ -152,15 +169,16 @@ export interface GalleryVideo {
 }
 
 export const GALLERY_VIDEOS: GalleryVideo[] = [
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 1', duration: '0:22' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 2', duration: '0:14' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 3', duration: '0:20' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 4', duration: '0:09' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 5', duration: '0:17' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 6', duration: '0:19' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 7', duration: '0:22' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 8', duration: '0:08' },
-  { src: '/videos/placeholder-walkthrough.mp4', title: 'Installation walkthrough 9', duration: '0:31' },
+  { src: '/assets/videos/installation-01.mp4', title: 'Installation video 1', duration: '0:51' },
+  { src: '/assets/videos/installation-02.mp4', title: 'Installation video 2', duration: '2:08' },
+  { src: '/assets/videos/installation-03.mp4', title: 'Installation video 3', duration: '2:18' },
+  { src: '/assets/videos/installation-04.mp4', title: 'Installation video 4', duration: '0:36' },
+  { src: '/assets/videos/installation-05.mp4', title: 'Installation video 5', duration: '0:49' },
+  { src: '/assets/videos/installation-06.mp4', title: 'Installation video 6', duration: '0:34' },
+  { src: '/assets/videos/installation-07.mp4', title: 'Installation video 7', duration: '1:24' },
+  { src: '/assets/videos/installation-08.mp4', title: 'Installation video 8', duration: '2:15' },
+  { src: '/assets/videos/installation-09.mp4', title: 'Installation video 9', duration: '0:03' },
+  { src: '/assets/videos/installation-10.mp4', title: 'Installation video 10', duration: '0:08' },
 ];
 
 /** Featured YouTube video (YouTube video ID). */

@@ -1,9 +1,10 @@
+import { SiteImage } from '../../core/data/images';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { PAGES } from '../../core/config/pages';
 import { SITE } from '../../core/config/site.config';
-import { image } from '../../core/data/images';
+
 import { PRODUCT_CATEGORIES, PRODUCTS, ProductCategory, lowestPrice } from '../../core/data/products';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
@@ -16,7 +17,7 @@ interface ListItem {
   name: string;
   summary: string;
   link: string;
-  image: ReturnType<typeof image>;
+  image: SiteImage;
   fromPrice?: number;
   category: ProductCategory;
   tag: string;
@@ -38,7 +39,7 @@ const ALL_ITEMS: ListItem[] = [
     name: 'RO water purifiers',
     summary: 'RO + UV purifiers with alkaline and copper stages from Kent, Aqua and Euro.',
     link: '/products/ro-water-purifiers',
-    image: image('ro-kent-crystal-star-black', 'Kent Crystal Star black RO + UV water purifier'),
+    image: { src: '/assets/products/ro-water-purifier.webp', alt: 'Aqua Innovica RO water purifier' },
     fromPrice: 9990,
     category: 'purifiers',
     tag: label('purifiers'),

@@ -18,12 +18,12 @@ import { StateView } from '../../shared/ui/state';
       [breadcrumbs]="breadcrumbs"
       eyebrow="Careers"
       title="Join the Saki Technologies team"
-      lead="We are a growing Chennai team focused on great service, practical skills and doing the job right."
+      lead="We are not hiring at the moment, but we are always glad to hear from people who care about clean water and good service."
     />
 
     <section class="section" aria-labelledby="openings">
       <div class="container">
-        <app-section-heading headingId="openings" title="Open positions" />
+        <app-section-heading headingId="openings" title="Current openings" />
         @if (jobs.length) {
           <ul class="grid grid--2 card-list">
             @for (job of jobs; track job.title) {
@@ -36,7 +36,7 @@ import { StateView } from '../../shared/ui/state';
             }
           </ul>
         } @else {
-          <app-state title="No open positions right now" message="We still welcome applications — send us your details below." />
+          <app-state title="No open positions right now" message="We are not hiring at the moment. Send us your details below and we will keep them on file for future openings." />
         }
       </div>
     </section>
@@ -58,9 +58,9 @@ import { StateView } from '../../shared/ui/state';
 
     <section id="apply" class="section" aria-labelledby="apply-title">
       <div class="container narrow">
-        <app-section-heading headingId="apply-title" title="Apply now" lead="Tell us which role interests you and a little about your experience." />
+        <app-section-heading headingId="apply-title" title="Stay in touch" lead="Share a little about yourself and your experience. We will get in touch if a suitable role opens up." />
         <div class="card">
-          <app-enquiry-form kind="career" idPrefix="job" [positions]="positions" submitLabel="Send application" />
+          <app-enquiry-form kind="career" idPrefix="job" [positions]="positions" submitLabel="Send details" />
         </div>
       </div>
     </section>

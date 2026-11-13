@@ -72,7 +72,7 @@ export class EnquiryForm {
 
   async submit(): Promise<void> {
     this.submitted.set(true);
-    if (this.kind() === 'career') this.form.controls.position.addValidators(Validators.required);
+    if (this.kind() === 'career' && this.positions().length) this.form.controls.position.addValidators(Validators.required);
     this.form.controls.position.updateValueAndValidity();
 
     if (this.form.invalid) {

@@ -43,7 +43,8 @@ $desktop: 1200px; // below this the nav collapses into the slide-down panel
     box-shadow: 0 6px 16px color-mix(in srgb, var(--color-primary) 35%, transparent), inset 0 1px 0 rgb(255 255 255 / .35);
     transition: transform .3s cubic-bezier(.3, 1.6, .5, 1);
     svg { animation: hdr-bob 4s ease-in-out infinite alternate; } }
-  &:hover &__mark { transform: rotate(-8deg) scale(1.08); }
+  &__logo { height: 2.75rem; width: auto; display: block; transition: transform .3s cubic-bezier(.3, 1.6, .5, 1); }
+  &:hover &__logo { transform: scale(1.08); }
   &__name { color: var(--color-primary); }
   &__text { display: grid; line-height: 1.1; }
   &__name { font-family: var(--font-script); font-weight: 600; font-size: 1.75rem; letter-spacing: 0; transform: rotate(-3deg); transform-origin: left center; }
@@ -146,12 +147,12 @@ $desktop: 1200px; // below this the nav collapses into the slide-down panel
 }
 @media (max-width: 420px) {
   .brand { gap: .45rem; min-width: 0; }
-  .brand__mark { width: 2.25rem; height: 2.25rem; border-radius: .65rem; }
+  .brand__logo { height: 2.4rem; }
   .brand__name { font-size: 1.4rem; white-space: nowrap; }
   .actions { gap: 0; }
 }
 @media (max-width: 340px) { .brand__name { font-size: 1.2rem; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .site-header::after, .brand__mark svg, .quote::after, .has-sub.is-open > .sub, .nav.is-open { animation: none; }
+  .site-header::after, .quote::after, .has-sub.is-open > .sub, .nav.is-open { animation: none; }
 }

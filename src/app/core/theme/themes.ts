@@ -25,7 +25,7 @@ export interface ThemePreset {
 }
 
 /**
- * The six built-in presets (BigBite, Violet, Rose, Amber, Slate, Cyber). Every text/background pair here is checked for
+ * The built-in presets (BigBite, Violet, Rose, Amber, Slate, Cyber, Saki). Every text/background pair here is checked for
  * WCAG AA contrast (4.5:1) by theme.spec.ts.
  */
 // export const THEME_PRESETS: ThemePreset[] = [
@@ -247,6 +247,33 @@ export const THEME_PRESETS: ThemePreset[] = [
       warning: '#FBBF24',
       danger: '#FB7185',
       info: '#38BDF8',
+    },
+  },
+  // 6. Saki – logo blue, cyan and lime
+  {
+    id: 'saki',
+    label: 'Saki',
+    description: 'Logo blue, cyan & lime',
+    scheme: 'light',
+    tokens: {
+      primary: '#16609F',
+      primaryHover: '#0F4A7C',
+      onPrimary: '#FFFFFF',
+      primarySoft: '#E1F1F8',
+      accent: '#8DB62A',
+
+      bg: '#F4FAFC',
+      surface: '#FFFFFF',
+      surfaceAlt: '#E8F3F8',
+
+      text: '#0B2538',
+      textMuted: '#42617A',
+      border: '#CCE1EC',
+
+      success: '#15803D',
+      warning: '#B45309',
+      danger: '#B91C1C',
+      info: '#0078C0',
     },
   },
 ];

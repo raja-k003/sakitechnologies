@@ -19,8 +19,8 @@ export const SITE = {
   warrantyYears: 1,
   logo: {
     url: '/images/saki-logo.png',
-    width: 600,
-    height: 325,
+    width: 296,
+    height: 400,
   },
   /** 1200×630 social-share image used when a page has no image of its own. */
   defaultOgImage: {

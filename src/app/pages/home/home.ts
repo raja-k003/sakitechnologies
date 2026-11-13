@@ -5,7 +5,6 @@ import { PAGES } from '../../core/config/pages';
 import { SITE } from '../../core/config/site.config';
 import { sortedPosts } from '../../core/data/blog';
 import { GALLERY, TESTIMONIALS } from '../../core/data/content';
-import { image } from '../../core/data/images';
 import { PRODUCTS, PRODUCT_CATEGORIES, ProductCategory, lowestPrice } from '../../core/data/products';
 import { localBusinessSchema, websiteSchema } from '../../core/seo/schema';
 import { SeoService } from '../../core/seo/seo.service';
@@ -69,14 +68,14 @@ export class Home {
     })),
     {
       category: 'purifiers' as ProductCategory, name: 'RO water purifiers', summary: 'RO + UV purifiers with alkaline and copper stages for safe drinking water, from Kent, Aqua and more.',
-      link: '/products/ro-water-purifiers', image: image('ro-kent-crystal-star-black', 'Kent Crystal Star black RO + UV water purifier'), fromPrice: 9990 as number | undefined,
+      link: '/products/ro-water-purifiers', image: { src: '/assets/products/ro-water-purifier.webp', alt: 'Aqua Innovica RO water purifier' }, fromPrice: 9990 as number | undefined,
       detailTitle: 'Why choose our RO purifiers', points: this.roHighlights.slice(0, 3), icon: 'sparkle', tone: 100, shade: 30, shortName: 'RO purifiers',
     },
   ];
   protected readonly foldTabs: { id: 'all' | ProductCategory; label: string }[] = [{ id: 'all', label: 'All products' }, ...PRODUCT_CATEGORIES];
   protected readonly foldFilter = signal<'all' | ProductCategory>('all');
   protected readonly visibleFold = computed(() => this.foldCards.filter((c) => this.foldFilter() === 'all' || c.category === this.foldFilter()));
-  protected readonly roImage = image('ro-kent-crystal-star-black', 'Kent Crystal Star black RO + UV water purifier');
+  protected readonly roImage = { src: '/assets/products/ro-water-purifier.webp', alt: 'Aqua Innovica RO water purifier' };
   protected readonly testimonials = TESTIMONIALS.slice(0, 3);
   protected readonly allTestimonials = TESTIMONIALS;
   protected readonly posts = sortedPosts().slice(0, 5);

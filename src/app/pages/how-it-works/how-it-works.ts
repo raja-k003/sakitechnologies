@@ -38,11 +38,17 @@ import { SectionHeading } from '../../shared/ui/section-heading';
     <section class="section section--alt">
       <div class="container">
         <app-section-heading title="The ion-exchange process, step by step" />
-        <ol class="steps">
-          @for (s of process; track s.title) {
-            <li><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>
+        <ol class="steps flow">
+          @for (s of process; track s.title; let last = $last) {
+            <li>
+              <span class="flow__icon"><app-icon [name]="s.icon" [size]="28" /></span>
+              <h3>{{ s.title }}</h3>
+              <p>{{ s.text }}</p>
+              @if (!last) { <span class="flow__arrow" aria-hidden="true"><app-icon name="arrow-right" [size]="18" /></span> }
+            </li>
           }
         </ol>
+        <p class="flow__note"><app-icon name="check" [size]="18" /> The cycle repeats automatically — no manual effort, just periodic salt top-ups.</p>
       </div>
     </section>
 
@@ -51,10 +57,11 @@ import { SectionHeading } from '../../shared/ui/section-heading';
         <app-section-heading title="Problems caused by hard water" />
         <ul class="grid card-list">
           @for (p of problems; track p.title) {
-            <li class="card">
-              <span class="icon-tile"><app-icon [name]="p.icon" [size]="24" /></span>
+            <li class="card problem">
+              <span class="problem__icon"><app-icon [name]="p.icon" [size]="26" /></span>
               <h3 class="card__title">{{ p.title }}</h3>
               <p class="card__text">{{ p.text }}</p>
+              <span class="problem__fix"><app-icon name="check" [size]="14" /> Solved with soft water</span>
             </li>
           }
         </ul>
@@ -64,16 +71,65 @@ import { SectionHeading } from '../../shared/ui/section-heading';
 
     <!-- <app-cta-band /> -->
   `,
-  styles: `.more { margin-top: 2rem; font-weight: 600; }`,
+  styles: `
+    .more { margin-top: 2rem; font-weight: 600; }
+    .flow { counter-reset: step; }
+    .flow > li { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-6) var(--space-5) var(--space-5); overflow: visible; }
+    .flow > li::before {
+      top: var(--space-4); right: var(--space-4); left: auto; font-size: var(--font-size-2xl, 1.75rem); opacity: 0.35;
+    }
+    .flow__icon {
+      display: grid; place-items: center; width: 3.5rem; height: 3.5rem; margin-bottom: var(--space-2);
+      border-radius: 50%; color: #fff;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      box-shadow: 0 10px 22px -10px var(--page-glow);
+    }
+    .flow > li:last-child .flow__icon { background: linear-gradient(135deg, var(--color-accent), var(--color-primary)); }
+    .flow h3 { margin: 0; }
+    .flow__arrow {
+      display: none; position: absolute; top: 50%; right: calc(var(--space-5) / -2 - 14px); z-index: 1;
+      width: 28px; height: 28px; place-items: center; border-radius: 50%; transform: translateY(-50%);
+      background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-primary);
+    }
+    @media (min-width: 900px) { .flow__arrow { display: grid; } }
+    .problem {
+      position: relative; display: flex; flex-direction: column; gap: var(--space-2); overflow: hidden;
+      padding-top: var(--space-6); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .problem::before {
+      content: ''; position: absolute; inset: 0 0 auto; height: 4px;
+      background: linear-gradient(90deg, #f59e0b, #ef4444);
+    }
+    .problem:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -22px rgb(239 68 68 / 0.35); }
+    .problem__icon {
+      display: grid; place-items: center; width: 3.25rem; height: 3.25rem; margin-bottom: var(--space-2);
+      border-radius: var(--radius-md); color: #c2410c;
+      background: color-mix(in srgb, #f59e0b 16%, var(--color-surface));
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, #f59e0b 30%, transparent);
+    }
+    .problem .card__title, .problem .card__text { margin: 0; }
+    .problem__fix {
+      display: inline-flex; align-items: center; gap: 0.35rem; align-self: flex-start;
+      margin-top: auto; padding: 0.25rem 0.7rem; border-radius: 999px;
+      font-size: var(--font-size-xs, 0.75rem); font-weight: 600;
+      color: var(--color-primary); background: var(--color-primary-soft);
+    }
+    .problem__fix { margin-top: var(--space-3); }
+    .flow__note {
+      display: flex; align-items: center; justify-content: center; gap: var(--space-2);
+      margin: var(--space-6) auto 0; padding: var(--space-3) var(--space-5); width: fit-content; max-width: 100%;
+      border-radius: 999px; background: var(--color-primary-soft); color: var(--color-primary); font-weight: 600; font-size: var(--font-size-sm);
+    }
+  `,
 })
 export class HowItWorks {
   protected readonly breadcrumbs = crumbs({ label: 'How it works' });
   protected readonly img = image('water-softener-home-plumbing-diagram', 'Diagram of a water softener connected to a home’s sump, overhead tank and taps');
   protected readonly process = [
-    { title: 'Hard water enters', text: 'Water from your sump or borewell flows into the resin tank.' },
-    { title: 'Resin captures minerals', text: 'Resin beads hold calcium and magnesium ions and release sodium ions in exchange.' },
-    { title: 'Soft water flows out', text: 'Softened water goes to every tap, shower and appliance in the house.' },
-    { title: 'Brine recharge', text: 'When the resin is saturated, a salt brine wash flushes the minerals away and the cycle starts again.' },
+    { icon: 'drop', title: 'Hard water enters', text: 'Water from your sump or borewell flows into the resin tank.' },
+    { icon: 'magnet', title: 'Resin captures minerals', text: 'Resin beads hold calcium and magnesium ions and release sodium ions in exchange.' },
+    { icon: 'sparkle', title: 'Soft water flows out', text: 'Softened water goes to every tap, shower and appliance in the house.' },
+    { icon: 'timer', title: 'Brine recharge', text: 'When the resin is saturated, a salt brine wash flushes the minerals away and the cycle starts again.' },
   ];
   protected readonly problems = [
     { icon: 'bubbles', title: 'Poor lather', text: 'Soap and shampoo do not foam properly, so you use more and still feel less clean.' },

@@ -3,7 +3,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PAGES } from '../../core/config/pages';
 import { SITE } from '../../core/config/site.config';
-import { image } from '../../core/data/images';
+import { findPreset, tokensToCssVars } from '../../core/theme/themes';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
 import { Breadcrumbs } from '../../shared/ui/breadcrumbs';
@@ -17,11 +17,14 @@ import { Icon } from '../../shared/ui/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './services.html',
   styleUrl: './services.scss',
+  // Page-scoped Saki theme: applies the 'saki' preset tokens to this page only (header/footer keep the user's theme).
+  host: { '[style]': 'themeVars' },
 })
 export class Services {
+  protected readonly themeVars = tokensToCssVars(findPreset('saki')?.tokens ?? {});
   protected readonly site = SITE;
   protected readonly breadcrumbs = crumbs({ label: 'Services' });
-  protected readonly img = image('technician-twin-vessel-installation', 'Saki Technologies technician beside a twin-vessel filter installation');
+  protected readonly img = { src: '/images/soft-water-kitchen-tap.webp', alt: 'Child washing hands under clean running water at a kitchen tap' };
   protected readonly services = [
     { icon: 'gauge', title: 'On-site water testing', text: 'We measure hardness, iron and turbidity at your tap and explain what they mean for your home.' },
     { icon: 'wrench', title: 'Installation', text: 'Softeners, filters and RO purifiers installed neatly with no civil work, usually within a day.' },

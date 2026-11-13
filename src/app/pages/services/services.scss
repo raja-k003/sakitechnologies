@@ -71,3 +71,17 @@
 @keyframes sv-roam { from { transform: translate(0, 0) rotate(0deg) scale(1); } to { transform: translate(-3rem, 2rem) rotate(40deg) scale(1.1); } }
 @keyframes sv-morph { 0% { border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%; } 50% { border-radius: 60% 40% 35% 65% / 55% 62% 38% 45%; } 100% { border-radius: 35% 65% 55% 45% / 60% 35% 65% 40%; } }
 @media (prefers-reduced-motion: reduce) { .sv-blob, .sv-drop, .sv-wave, .svc, .sv-list li, .sv-badge, .sv-proc__glow, .step, .step__ring { animation: none; } .svc, .svc::before, .svc__icon, .sv-photo img, .sv-list li, .step__disc { transition: none; } }
+
+/* ---------- page-scoped Saki theme ---------- */
+:host {
+  display: block;
+  color-scheme: light;
+  background: var(--color-bg);
+  color: var(--color-text);
+  /* app-root derives these from the active theme, so re-derive them from the Saki tokens here */
+  --page-accent: color-mix(in srgb, #0ea5e9 82%, var(--color-accent));
+  --page-soft: color-mix(in srgb, var(--page-accent) 16%, var(--color-primary-soft));
+  --page-alt: color-mix(in srgb, var(--page-accent) 9%, var(--color-surface-alt));
+  --page-glow: color-mix(in srgb, var(--page-accent) 55%, transparent);
+  accent-color: var(--color-primary);
+}

@@ -1,4 +1,4 @@
-import { image, SiteImage } from './images';
+import { SiteImage } from './images';
 
 export interface BlogPost {
   slug: string;
@@ -24,7 +24,7 @@ export const BLOG_POSTS: BlogPost[] = [
     published: '2023-12-09',
     author: 'Saki Technologies',
     readingMinutes: 4,
-    image: image('blog-signs-of-hard-water', 'Person washing hands under a kitchen tap'),
+    image: { src: '/assets/blogs/blog-7.webp', alt: 'Softener vessels, control unit and steel storage tank installed in a utility room' },
     legacyPath: '/2023/12/09/common-signs-of-hard-water-and-why-a-water-softener-is-essential-2',
     relatedProduct: 'water-softeners',
   },
@@ -36,7 +36,7 @@ export const BLOG_POSTS: BlogPost[] = [
     published: '2023-12-08',
     author: 'Saki Technologies',
     readingMinutes: 4,
-    image: image('blog-water-softener-maintenance', 'Hands under water running from a tap'),
+    image: { src: '/assets/blogs/blog-2.webp', alt: 'Stainless steel water treatment skid with blue filter housings and a booster pump' },
     legacyPath: '/2023/12/08/diy-maintenance-tips-for-your-water-softener-system',
     relatedProduct: 'water-softeners',
   },
@@ -48,7 +48,7 @@ export const BLOG_POSTS: BlogPost[] = [
     published: '2023-12-08',
     author: 'Saki Technologies',
     readingMinutes: 5,
-    image: image('blog-choosing-water-softener', 'Technician checking a wall-mounted water heater'),
+    image: { src: '/assets/blogs/blog-4.webp', alt: 'Large water treatment systems lined up in a Saki Technologies workshop' },
     legacyPath: '/2023/12/08/common-signs-of-hard-water-and-why-a-water-softener-is-essential',
     relatedProduct: 'water-softeners',
   },
@@ -60,7 +60,7 @@ export const BLOG_POSTS: BlogPost[] = [
     published: '2024-01-15',
     author: 'Saki Technologies',
     readingMinutes: 4,
-    image: image('blog-iron-in-borewell-water', 'Borewell water with a rust-coloured tint in a glass'),
+    image: { src: '/assets/blogs/blog-3.webp', alt: 'Saki Technologies iron filter and softener vessels installed beside an overhead tank' },
     relatedProduct: 'iron-filters',
   },
   {
@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
     published: '2024-02-12',
     author: 'Saki Technologies',
     readingMinutes: 4,
-    image: image('blog-sand-vs-carbon-filter', 'Two filter vessels installed side by side'),
+    image: { src: '/assets/blogs/blog-6.webp', alt: 'Two blue filter vessels with a control panel and pre-filters on a steel frame' },
     relatedProduct: 'sand-filters',
   },
 ];

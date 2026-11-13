@@ -5,7 +5,7 @@ import { ThemeService, deriveCustomVars } from './theme.service';
 import { THEME_PRESETS, buildThemeCss } from './themes';
 
 describe('theme presets', () => {
-  it('ships six presets', () => expect(THEME_PRESETS.length).toBe(6));
+  it('ships seven presets', () => expect(THEME_PRESETS.length).toBe(7));
 
   for (const t of THEME_PRESETS) {
     it(`${t.id} meets WCAG AA contrast`, () => {

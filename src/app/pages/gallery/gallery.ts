@@ -8,11 +8,10 @@ import { SeoService } from '../../core/seo/seo.service';
 import { LazyVideo } from '../../shared/ui/lazy-video';
 import { LazyYoutube } from '../../shared/ui/lazy-youtube';
 import { PageHeader } from '../../shared/ui/page-header';
-import { StateView } from '../../shared/ui/state';
 
 @Component({
   selector: 'app-gallery',
-  imports: [NgOptimizedImage, LazyVideo, LazyYoutube, PageHeader, StateView],
+  imports: [NgOptimizedImage, LazyVideo, LazyYoutube, PageHeader],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <app-page-header
@@ -43,8 +42,7 @@ import { StateView } from '../../shared/ui/state';
     <section class="section">
       <div class="container">
         <h2 class="visually-hidden">Installation photos</h2>
-        @if (items.length) {
-          <ul class="gallery card-list">
+        <ul class="gallery card-list">
             @for (item of items; track item.image.src; let i = $index) {
               <li>
                 <figure>
@@ -55,10 +53,7 @@ import { StateView } from '../../shared/ui/state';
                 </figure>
               </li>
             }
-          </ul>
-        } @else {
-          <app-state title="No photos yet" message="We are adding photos of recent installations. Please check back soon." />
-        }
+        </ul>
       </div>
     </section>
     <!-- <app-cta-band /> -->
