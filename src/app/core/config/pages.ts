@@ -133,5 +133,5 @@ export type PageKey = keyof typeof PAGES;
 
 /** Static paths that are safe to prerender at build time. */
 export const PRERENDER_STATIC_PATHS = Object.values(PAGES as Record<string, PageMeta>)
-  .filter((p) => p.indexable && p.path !== '/products' && p.path !== '/blog')
+  .filter((p) => p.indexable)
   .map((p) => p.path.replace(/^\//, ''));

@@ -29,6 +29,6 @@ export default `<!doctype html>
 </script>
   <app-root></app-root>
   <noscript><p style="padding:1rem;text-align:center">This site works best with JavaScript enabled, but all content is available without it.</p></noscript>
-<link rel="modulepreload" href="chunk-Dc85JWhB.js"><script src="main-O553EFFD.js" type="module"></script></body>
+<link rel="modulepreload" href="chunk-Dc85JWhB.js"><script src="main-M5ARVX76.js" type="module"></script></body>
 </html>
 `;

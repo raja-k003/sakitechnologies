@@ -6,9 +6,9 @@ import { PRODUCTS } from './core/data/products';
 /**
  * Rendering strategy per route:
  * - Prerender (SSG) for static content: fastest TTFB, fully rendered HTML.
- * - Server (SSR) for pages whose output depends on the query string
- *   (/products?category=, /blog?page=), because prerendered HTML ignores queries.
- * - Everything else hits the wildcard: server-rendered with HTTP 404.
+ * - /products and /blog are prerendered too (GitHub Pages is static); their query-string views
+ *   (?category=, ?page=) are applied in the browser after hydration.
+ * - Everything else hits the wildcard: server-rendered with HTTP 404 (on GitHub Pages: 404.html).
  */
 export const serverRoutes: ServerRoute[] = [
   { path: '', renderMode: RenderMode.Prerender },
@@ -23,7 +23,5 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () => BLOG_POSTS.map((p) => ({ slug: p.slug })),
   },
-  { path: 'products', renderMode: RenderMode.Server },
-  { path: 'blog', renderMode: RenderMode.Server },
   { path: '**', renderMode: RenderMode.Server, status: 404, headers: { 'Cache-Control': 'no-store' } },
 ];
