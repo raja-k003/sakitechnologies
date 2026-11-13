@@ -43,7 +43,7 @@ export class BlogPostPage {
   constructor() {
     const p = this.post;
     inject(SeoService).setPage({
-      title: p.title,
+      title: p.seoTitle ?? p.title,
       description: p.description,
       path: `/blog/${p.slug}`,
       type: 'article',

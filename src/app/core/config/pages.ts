@@ -27,7 +27,7 @@ export const PAGES = {
   },
   about: {
     path: '/about',
-    title: 'About Us – 25 Years of Water Treatment in Chennai',
+    title: 'About Us – 25 Years in Water Treatment',
     description: 'Saki Technologies has spent 25 years solving hard water, iron and turbidity problems for Chennai homes and businesses. Our vision, mission and approach.',
     indexable: true,
     changefreq: 'yearly',
@@ -35,7 +35,7 @@ export const PAGES = {
   },
   services: {
     path: '/services',
-    title: 'Water Softener Installation & Service in Chennai',
+    title: 'Water Softener Installation & Service',
     description: 'On-site water testing, installation, recharging and maintenance for water softeners, sand, iron and carbon filters and RO purifiers across Chennai.',
     indexable: true,
     changefreq: 'monthly',
@@ -43,7 +43,7 @@ export const PAGES = {
   },
   howItWorks: {
     path: '/how-it-works',
-    title: 'How a Water Softener Works – Hard Water Explained',
+    title: 'How a Water Softener Works',
     description: 'What makes water hard, the problems it causes at home, and how an ion-exchange water softener removes calcium and magnesium step by step.',
     indexable: true,
     changefreq: 'yearly',
@@ -51,7 +51,7 @@ export const PAGES = {
   },
   products: {
     path: '/products',
-    title: 'Water Softeners, Filters & RO Purifiers – Products',
+    title: 'Water Softeners, Filters & RO Purifiers',
     description: 'Compare Saki Technologies water softeners, sand, iron and carbon filters, softener resin and RO + UV purifiers, with model prices.',
     indexable: true,
     changefreq: 'monthly',
@@ -59,7 +59,7 @@ export const PAGES = {
   },
   ro: {
     path: '/products/ro-water-purifiers',
-    title: 'RO + UV + Alkaline Water Purifiers – Prices in Chennai',
+    title: 'RO + UV Water Purifiers in Chennai',
     description: 'RO + UV water purifiers with alkaline and copper stages from ₹9,990, including Kent and Aqua models. Supplied and installed in Chennai.',
     indexable: true,
     changefreq: 'monthly',
@@ -67,7 +67,7 @@ export const PAGES = {
   },
   calculator: {
     path: '/calculator',
-    title: 'Water Softener Calculator – Salt, Resin Size & MPV Settings',
+    title: 'Water Softener Calculator',
     description: 'Free water softener calculator: work out salt and regeneration chemistry, the resin size you need and multiport valve settings from your water hardness.',
     indexable: true,
     changefreq: 'yearly',
@@ -83,7 +83,7 @@ export const PAGES = {
   },
   faq: {
     path: '/faq',
-    title: 'Water Softener FAQ – Installation, Maintenance & Safety',
+    title: 'Water Softener FAQ',
     description: 'Answers to common questions about water softeners: how ion exchange works, installation, maintenance, drinking softened water and lifespan.',
     indexable: true,
     changefreq: 'monthly',
@@ -92,14 +92,14 @@ export const PAGES = {
   careers: {
     path: '/careers',
     title: 'Careers – Join Our Team in Chennai',
-    description: 'Saki Technologies in Chennai is not hiring right now. Send us your details and we will keep them on file for future openings.',
+    description: 'Saki Technologies in Chennai is not hiring right now. Send us your details and we will keep your CV on file for future technician and sales openings.',
     indexable: true,
     changefreq: 'monthly',
     priority: 0.4,
   },
   gallery: {
     path: '/gallery',
-    title: 'Installation Gallery – Our Completed Projects',
+    title: 'Installation Gallery',
     description: 'Photos of water softener, sand, iron and carbon filter installations completed by Saki Technologies at homes and apartments across Chennai.',
     indexable: true,
     changefreq: 'monthly',
@@ -108,14 +108,14 @@ export const PAGES = {
   blog: {
     path: '/blog',
     title: 'Water Treatment Blog – Tips & Guides',
-    description: 'Guides on hard water, water softener maintenance and choosing the right water treatment system for your home.',
+    description: 'Guides on hard water, water softener maintenance, iron removal and choosing the right water treatment system for your Chennai home or apartment.',
     indexable: true,
     changefreq: 'weekly',
     priority: 0.7,
   },
   contact: {
     path: '/contact',
-    title: 'Contact Us – Book a Free Water Test in Chennai',
+    title: 'Contact Us – Free Water Test in Chennai',
     description: 'Call +91 86107 57583 or send an enquiry to book a water test. Visit us at Mettu St, Kuppusamy Nagar, Ayanavaram, Chennai. Open Mon–Sat, 9 am–5 pm.',
     indexable: true,
     changefreq: 'yearly',

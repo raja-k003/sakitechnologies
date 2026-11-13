@@ -165,3 +165,78 @@ export function faqSchema(faqs: Faq[]): JsonLd {
     })),
   };
 }
+
+type PageType = 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage' | 'ImageGallery' | 'ItemPage';
+
+/** Describes the page itself and ties it to the site and business by @id. */
+export function webPageSchema(type: PageType, name: string, description: string, path: string): JsonLd {
+  const url = abs(path);
+  return {
+    '@context': 'https://schema.org',
+    '@type': type,
+    '@id': `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: SITE.lang,
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': ORG_ID },
+  };
+}
+
+/** HowTo for step-by-step content. Steps must match the visible copy on the page. */
+export function howToSchema(name: string, description: string, path: string, steps: { title: string; text: string }[]): JsonLd {
+  const url = abs(path);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': `${url}#howto`,
+    name,
+    description,
+    inLanguage: SITE.lang,
+    step: steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title, text: s.text, url: `${url}#step-${i + 1}` })),
+  };
+}
+
+/** The business's services as a catalogue, provided by the LocalBusiness and offered across Chennai. */
+export function serviceSchema(path: string, services: { title: string; text: string }[]): JsonLd {
+  const url = abs(path);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${url}#service`,
+    name: 'Water treatment installation and service',
+    serviceType: 'Water softener, filter and RO purifier installation and maintenance',
+    provider: { '@id': ORG_ID },
+    areaServed: { '@type': 'City', name: SITE.address.city },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Saki Technologies services',
+      itemListElement: services.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.title, description: s.text } })),
+    },
+  };
+}
+
+export function productListSchema(path: string, products: { slug: string; name: string }[]): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${abs(path)}#list`,
+    itemListElement: products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: abs(`/products/${p.slug}`) })),
+  };
+}
+
+export function webApplicationSchema(name: string, description: string, path: string): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name,
+    description,
+    url: abs(path),
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any',
+    inLanguage: SITE.lang,
+    offers: { '@type': 'Offer', price: 0, priceCurrency: 'INR' },
+    provider: { '@id': ORG_ID },
+  };
+}

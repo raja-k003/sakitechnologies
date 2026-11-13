@@ -6,6 +6,7 @@ import { SITE } from '../../core/config/site.config';
 import { image } from '../../core/data/images';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { webPageSchema } from '../../core/seo/schema';
 import { Breadcrumbs } from '../../shared/ui/breadcrumbs';
 // import { CtaBand } from '../../shared/ui/cta-band';
 import { Icon } from '../../shared/ui/icon';
@@ -56,7 +57,7 @@ export class About {
 
   constructor() {
     const p = PAGES.about;
-    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs });
+    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs, jsonLd: webPageSchema('AboutPage', p.title, p.description, p.path) });
 
     // Count the figures up the first time the stats band scrolls into view.
     afterNextRender(() => {

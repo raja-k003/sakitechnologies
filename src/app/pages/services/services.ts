@@ -6,6 +6,7 @@ import { SITE } from '../../core/config/site.config';
 import { findPreset, tokensToCssVars } from '../../core/theme/themes';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { serviceSchema, webPageSchema } from '../../core/seo/schema';
 import { Breadcrumbs } from '../../shared/ui/breadcrumbs';
 import { ButtonDirective } from '../../shared/ui/button';
 // import { CtaBand } from '../../shared/ui/cta-band';
@@ -49,6 +50,6 @@ export class Services {
 
   constructor() {
     const p = PAGES.services;
-    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs });
+    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs, jsonLd: [webPageSchema('WebPage', p.title, p.description, p.path), serviceSchema(p.path, this.services)] });
   }
 }

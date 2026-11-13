@@ -278,7 +278,7 @@ export const THEME_PRESETS: ThemePreset[] = [
   },
 ];
 
-export const DEFAULT_THEME_ID = 'bigbite';
+export const DEFAULT_THEME_ID = 'saki';
 export const THEME_STORAGE_KEY = 'smp-theme';
 export const THEME_VARS_STORAGE_KEY = 'smp-theme-vars';
 export const THEME_CUSTOM_STORAGE_KEY = 'smp-theme-custom';

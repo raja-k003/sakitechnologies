@@ -48,9 +48,9 @@ describe('ThemeService', () => {
     service = TestBed.inject(ThemeService);
   });
 
-  it('injects preset styles once and defaults to bigbite', () => {
+  it('injects preset styles once and defaults to saki', () => {
     expect(doc.querySelectorAll('#theme-presets').length).toBe(1);
-    expect(service.themeId()).toBe('bigbite');
+    expect(service.themeId()).toBe('saki');
   });
 
   it('applies and persists a preset', () => {
@@ -62,7 +62,7 @@ describe('ThemeService', () => {
 
   it('ignores unknown presets and invalid colours', () => {
     service.setTheme('neon');
-    expect(service.themeId()).toBe('bigbite');
+    expect(service.themeId()).toBe('saki');
     expect(service.setCustomPrimary('red')).toBe(false);
   });
 

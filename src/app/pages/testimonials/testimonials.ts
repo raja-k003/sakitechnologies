@@ -3,6 +3,7 @@ import { PAGES } from '../../core/config/pages';
 import { TESTIMONIALS } from '../../core/data/content';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { webPageSchema } from '../../core/seo/schema';
 // import { CtaBand } from '../../shared/ui/cta-band';
 import { PageHeader } from '../../shared/ui/page-header';
 import { StateView } from '../../shared/ui/state';
@@ -44,6 +45,6 @@ export class Testimonials {
     // Self-serving reviews on a business's own site are not eligible for review
     // rich results, so no Review/AggregateRating markup is added here.
     const p = PAGES.testimonials;
-    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs });
+    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs, jsonLd: webPageSchema('WebPage', p.title, p.description, p.path) });
   }
 }

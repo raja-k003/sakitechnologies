@@ -3,6 +3,7 @@ import { PAGES } from '../../core/config/pages';
 import { JOB_OPENINGS } from '../../core/data/content';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { webPageSchema } from '../../core/seo/schema';
 import { EnquiryForm } from '../../shared/forms/enquiry-form';
 import { Icon } from '../../shared/ui/icon';
 import { PageHeader } from '../../shared/ui/page-header';
@@ -81,6 +82,6 @@ export class Careers {
     // JobPosting markup is intentionally omitted: it requires posting dates,
     // locations and validity periods that are not published for these roles.
     const p = PAGES.careers;
-    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs });
+    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs, jsonLd: webPageSchema('WebPage', p.title, p.description, p.path) });
   }
 }

@@ -8,6 +8,7 @@ import { SITE } from '../../core/config/site.config';
 import { PRODUCT_CATEGORIES, PRODUCTS, ProductCategory, lowestPrice } from '../../core/data/products';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { productListSchema, webPageSchema } from '../../core/seo/schema';
 // import { CtaBand } from '../../shared/ui/cta-band';
 import { PageHeader } from '../../shared/ui/page-header';
 import { ProductCard } from '../../shared/ui/product-card';
@@ -123,6 +124,7 @@ export class Products {
           breadcrumbs: this.breadcrumbs,
           // Filtered views duplicate the main listing: keep them out of the index.
           noindex: !!category,
+          jsonLd: category ? undefined : [webPageSchema('CollectionPage', p.title, p.description, p.path), productListSchema(p.path, PRODUCTS)],
         });
       });
   }

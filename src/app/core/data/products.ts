@@ -40,7 +40,7 @@ export const PRODUCTS: Product[] = [
     slug: 'water-softeners',
     name: 'Water Softener',
     category: 'softeners',
-    seoTitle: 'Water Softener for Home in Chennai – Prices & Models',
+    seoTitle: 'Water Softener for Home in Chennai',
     seoDescription:
       'Automatic and manual water softeners from ₹41,900. Remove calcium and magnesium hardness, stop scale on taps and geysers. Installed across Chennai.',
     h1: 'Water softeners for homes and apartments',
@@ -82,7 +82,7 @@ export const PRODUCTS: Product[] = [
     slug: 'purolite-softener-resin',
     name: 'Purolite Water Softener Resin',
     category: 'softeners',
-    seoTitle: 'Purolite Water Softener Resin – Food-Grade Replacement Resin',
+    seoTitle: 'Purolite Water Softener Resin',
     seoDescription:
       'Food-grade Purolite ion-exchange resin for water softeners. Handles up to 1500 ppm hardness. Resin replacement and recharging service in Chennai.',
     h1: 'Purolite water softener resin',
@@ -103,7 +103,7 @@ export const PRODUCTS: Product[] = [
     slug: 'sand-filters',
     name: 'Sand Filter',
     category: 'filters',
-    seoTitle: 'Sand Filter for Borewell & Sump Water – Prices',
+    seoTitle: 'Sand Filter for Borewell Water',
     seoDescription:
       'Multi-grade sand filters from ₹29,000 that remove mud, silt and suspended particles from borewell and sump water. Zero maintenance, no recurring cost.',
     h1: 'Sand filters for clear borewell and sump water',
@@ -128,7 +128,7 @@ export const PRODUCTS: Product[] = [
     slug: 'iron-filters',
     name: 'Iron Filter',
     category: 'filters',
-    seoTitle: 'Iron Removal Filter for Borewell Water in Chennai',
+    seoTitle: 'Iron Removal Filter for Borewell',
     seoDescription:
       'Iron removal filters that stop yellow and brown stains, metallic smell and clogged fittings caused by iron and manganese in borewell water.',
     h1: 'Iron removal filters for borewell water',
@@ -150,7 +150,7 @@ export const PRODUCTS: Product[] = [
     slug: 'carbon-filters',
     name: 'Carbon Filter',
     category: 'filters',
-    seoTitle: 'Activated Carbon Filter – Remove Odour, Taste & Chemicals',
+    seoTitle: 'Activated Carbon Filter for Water',
     seoDescription:
       'Activated carbon filters that remove bad odour, taste, colour, chlorine and organic chemicals from water. No recurring cost, zero maintenance.',
     h1: 'Activated carbon filters for better taste and odour',

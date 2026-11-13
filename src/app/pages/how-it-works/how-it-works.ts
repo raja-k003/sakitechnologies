@@ -5,6 +5,7 @@ import { PAGES } from '../../core/config/pages';
 import { image } from '../../core/data/images';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { howToSchema, webPageSchema } from '../../core/seo/schema';
 // import { CtaBand } from '../../shared/ui/cta-band';
 import { Icon } from '../../shared/ui/icon';
 import { PageHeader } from '../../shared/ui/page-header';
@@ -39,8 +40,8 @@ import { SectionHeading } from '../../shared/ui/section-heading';
       <div class="container">
         <app-section-heading title="The ion-exchange process, step by step" />
         <ol class="steps flow">
-          @for (s of process; track s.title; let last = $last) {
-            <li>
+          @for (s of process; track s.title; let last = $last; let i = $index) {
+            <li [id]="'step-' + (i + 1)">
               <span class="flow__icon"><app-icon [name]="s.icon" [size]="28" /></span>
               <h3>{{ s.title }}</h3>
               <p>{{ s.text }}</p>
@@ -140,6 +141,6 @@ export class HowItWorks {
 
   constructor() {
     const p = PAGES.howItWorks;
-    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs });
+    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs, jsonLd: [webPageSchema('WebPage', p.title, p.description, p.path), howToSchema('How an ion-exchange water softener works', p.description, p.path, this.process)] });
   }
 }

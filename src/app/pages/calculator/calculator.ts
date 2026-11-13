@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { PAGES } from '../../core/config/pages';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { webApplicationSchema, webPageSchema } from '../../core/seo/schema';
 import { ButtonDirective } from '../../shared/ui/button';
 import { Icon } from '../../shared/ui/icon';
 import { PageHeader } from '../../shared/ui/page-header';
@@ -76,7 +77,7 @@ export class Calculator {
 
   constructor() {
     const p = PAGES.calculator;
-    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs });
+    inject(SeoService).setPage({ title: p.title, description: p.description, path: p.path, breadcrumbs: this.breadcrumbs, jsonLd: [webPageSchema('WebPage', p.title, p.description, p.path), webApplicationSchema('Water softener calculator', p.description, p.path)] });
   }
 
   protected select(id: TabId): void {

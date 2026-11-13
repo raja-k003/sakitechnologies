@@ -4,6 +4,7 @@ import { PAGES } from '../../core/config/pages';
 import { GALLERY, GALLERY_VIDEOS, GALLERY_YOUTUBE } from '../../core/data/content';
 import { crumbs } from '../../core/seo/breadcrumbs';
 import { SeoService } from '../../core/seo/seo.service';
+import { webPageSchema } from '../../core/seo/schema';
 // import { CtaBand } from '../../shared/ui/cta-band';
 import { LazyVideo } from '../../shared/ui/lazy-video';
 import { LazyYoutube } from '../../shared/ui/lazy-youtube';
@@ -89,6 +90,7 @@ export class Gallery {
       path: p.path,
       breadcrumbs: this.breadcrumbs,
       image: { url: GALLERY[0].image.src, alt: GALLERY[0].image.alt },
+      jsonLd: webPageSchema('ImageGallery', p.title, p.description, p.path),
     });
   }
 }
