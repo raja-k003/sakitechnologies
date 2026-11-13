@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://sakitechnologies.com/sitemap.xml
+Sitemap: https://sakirotech.in/sitemap.xml

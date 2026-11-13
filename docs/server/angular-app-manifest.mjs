@@ -12,114 +12,114 @@ export default {
   {
     "renderMode": 2,
     "preload": [
-      "chunk-BHmiBwXg.js",
-      "chunk-DiX7M0di.js"
+      "chunk-CQnEqpkg.js",
+      "chunk-Bt23YeNQ.js"
     ],
     "route": "/about"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-_ZKmobUI.js",
-      "chunk-DiX7M0di.js"
+      "chunk-jEQ3kxJI.js",
+      "chunk-Bt23YeNQ.js"
     ],
     "route": "/services"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-U47VFaVD.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js"
+      "chunk-DIKPWXT4.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js"
     ],
     "route": "/how-it-works"
   },
   {
     "renderMode": 0,
     "preload": [
-      "chunk-CF5WrJrT.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DJvgcPlg.js",
-      "chunk-DsZANli-.js",
-      "chunk-Bxz02eaQ.js"
+      "chunk-CKeAGq7f.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-C6PD7FJa.js",
+      "chunk-CeqbLW2W.js"
     ],
     "route": "/products"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-jd4FkrE1.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js"
+      "chunk-ZZlbJqql.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js"
     ],
     "route": "/products/ro-water-purifiers"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-CmP7iES4.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
-      "chunk-Bxz02eaQ.js"
+      "chunk-BUpl1mmh.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-C6PD7FJa.js"
     ],
     "route": "/products/water-softeners"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-CmP7iES4.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
-      "chunk-Bxz02eaQ.js"
+      "chunk-BUpl1mmh.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-C6PD7FJa.js"
     ],
     "route": "/products/purolite-softener-resin"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-CmP7iES4.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
-      "chunk-Bxz02eaQ.js"
+      "chunk-BUpl1mmh.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-C6PD7FJa.js"
     ],
     "route": "/products/sand-filters"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-CmP7iES4.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
-      "chunk-Bxz02eaQ.js"
+      "chunk-BUpl1mmh.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-C6PD7FJa.js"
     ],
     "route": "/products/iron-filters"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-CmP7iES4.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
-      "chunk-Bxz02eaQ.js"
+      "chunk-BUpl1mmh.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-C6PD7FJa.js"
     ],
     "route": "/products/carbon-filters"
   },
   {
     "renderMode": 0,
     "preload": [
-      "chunk-CmP7iES4.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
-      "chunk-Bxz02eaQ.js"
+      "chunk-BUpl1mmh.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-C6PD7FJa.js"
     ],
     "route": "/products/*"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-CDIqdmYV.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
+      "chunk-CzzLSYNA.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
       "chunk-D3nM601u.js"
     ],
     "route": "/calculator"
@@ -127,117 +127,117 @@ export default {
   {
     "renderMode": 2,
     "preload": [
-      "chunk-DgCdmxHT.js",
-      "chunk-DiX7M0di.js",
-      "chunk-BhXmQGhr.js",
-      "chunk-DJvgcPlg.js",
-      "chunk-DsZANli-.js"
+      "chunk-HJ5jss1a.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-CeqbLW2W.js",
+      "chunk-Ccq6B6wB.js"
     ],
     "route": "/testimonials"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-CS4Kr9eZ.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js",
+      "chunk-EOk10dmz.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
       "chunk-D3nM601u.js",
-      "chunk-BL1Rke1u.js"
+      "chunk-DeqEHaoX.js"
     ],
     "route": "/faq"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-Co7dDCDQ.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DJvgcPlg.js",
-      "chunk-DsZANli-.js",
+      "chunk-Ck_0jYB9.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js",
+      "chunk-CeqbLW2W.js",
       "chunk-D3nM601u.js",
-      "chunk-BL1Rke1u.js"
+      "chunk-DeqEHaoX.js"
     ],
     "route": "/careers"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-gyvhQMD8.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DsZANli-.js"
+      "chunk-GrY1ocr9.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CQdQaMFB.js"
     ],
     "route": "/gallery"
   },
   {
     "renderMode": 0,
     "preload": [
-      "chunk-BzekPy88.js",
-      "chunk-DiX7M0di.js",
-      "chunk-DJvgcPlg.js",
-      "chunk-GPRY_Mqt.js"
+      "chunk-Bxwd6KIa.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-CeqbLW2W.js",
+      "chunk-DUxoccSI.js"
     ],
     "route": "/blog"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-BPgAfu93.js",
-      "chunk-DiX7M0di.js",
-      "chunk-GPRY_Mqt.js"
+      "chunk-B9y0qneo.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-DUxoccSI.js"
     ],
     "route": "/blog/signs-of-hard-water"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-BPgAfu93.js",
-      "chunk-DiX7M0di.js",
-      "chunk-GPRY_Mqt.js"
+      "chunk-B9y0qneo.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-DUxoccSI.js"
     ],
     "route": "/blog/water-softener-maintenance-tips"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-BPgAfu93.js",
-      "chunk-DiX7M0di.js",
-      "chunk-GPRY_Mqt.js"
+      "chunk-B9y0qneo.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-DUxoccSI.js"
     ],
     "route": "/blog/choosing-the-right-water-softener"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-BPgAfu93.js",
-      "chunk-DiX7M0di.js",
-      "chunk-GPRY_Mqt.js"
+      "chunk-B9y0qneo.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-DUxoccSI.js"
     ],
     "route": "/blog/iron-in-borewell-water"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-BPgAfu93.js",
-      "chunk-DiX7M0di.js",
-      "chunk-GPRY_Mqt.js"
+      "chunk-B9y0qneo.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-DUxoccSI.js"
     ],
     "route": "/blog/sand-filter-vs-carbon-filter"
   },
   {
     "renderMode": 0,
     "preload": [
-      "chunk-BPgAfu93.js",
-      "chunk-DiX7M0di.js",
-      "chunk-GPRY_Mqt.js"
+      "chunk-B9y0qneo.js",
+      "chunk-Bt23YeNQ.js",
+      "chunk-DUxoccSI.js"
     ],
     "route": "/blog/*"
   },
   {
     "renderMode": 2,
     "preload": [
-      "chunk-2BLY8x3E.js",
-      "chunk-DiX7M0di.js",
+      "chunk-Ct66LwID.js",
+      "chunk-Bt23YeNQ.js",
       "chunk-D3nM601u.js",
-      "chunk-BL1Rke1u.js"
+      "chunk-DeqEHaoX.js"
     ],
     "route": "/contact"
   },
@@ -248,35 +248,35 @@ export default {
       "Cache-Control": "no-store"
     },
     "preload": [
-      "chunk-BsEPnd0u.js"
+      "chunk-8qnUIWRe.js"
     ],
     "route": "/**"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    "index.csr.html": {size: 16835, hash: "d045938154c69918", text: () => import("./assets-chunks/index_csr_html.mjs").then(m => m.default)},
-    "index.server.html": {size: 15015, hash: "8cdb1b67f3793bd6", text: () => import("./assets-chunks/index_server_html.mjs").then(m => m.default)},
-    "services/index.html": {size: 119916, hash: "32ff410b00ad7d18", text: () => import("./assets-chunks/services_index_html.mjs").then(m => m.default)},
-    "how-it-works/index.html": {size: 109677, hash: "d109b585b37057ca", text: () => import("./assets-chunks/how-it-works_index_html.mjs").then(m => m.default)},
-    "products/ro-water-purifiers/index.html": {size: 106691, hash: "cb0fcf90d75df486", text: () => import("./assets-chunks/products_ro-water-purifiers_index_html.mjs").then(m => m.default)},
-    "products/water-softeners/index.html": {size: 115410, hash: "f3f4d4d320b99303", text: () => import("./assets-chunks/products_water-softeners_index_html.mjs").then(m => m.default)},
-    "index.html": {size: 261237, hash: "51ad7a8ecb39775b", text: () => import("./assets-chunks/index_html.mjs").then(m => m.default)},
-    "about/index.html": {size: 114007, hash: "ffa3c32ab906ea68", text: () => import("./assets-chunks/about_index_html.mjs").then(m => m.default)},
-    "blog/water-softener-maintenance-tips/index.html": {size: 125021, hash: "7e024c3cb5d59382", text: () => import("./assets-chunks/blog_water-softener-maintenance-tips_index_html.mjs").then(m => m.default)},
-    "blog/choosing-the-right-water-softener/index.html": {size: 125965, hash: "e1bab0f91bb47b70", text: () => import("./assets-chunks/blog_choosing-the-right-water-softener_index_html.mjs").then(m => m.default)},
-    "faq/index.html": {size: 103074, hash: "6116fa3c2e2b54bc", text: () => import("./assets-chunks/faq_index_html.mjs").then(m => m.default)},
-    "careers/index.html": {size: 102673, hash: "22c5b2855f0d2530", text: () => import("./assets-chunks/careers_index_html.mjs").then(m => m.default)},
-    "contact/index.html": {size: 116734, hash: "4a85c6eaec8b91f9", text: () => import("./assets-chunks/contact_index_html.mjs").then(m => m.default)},
-    "products/iron-filters/index.html": {size: 109214, hash: "28619d6f6f978f0f", text: () => import("./assets-chunks/products_iron-filters_index_html.mjs").then(m => m.default)},
-    "products/carbon-filters/index.html": {size: 109309, hash: "23f5c0e555bd39bf", text: () => import("./assets-chunks/products_carbon-filters_index_html.mjs").then(m => m.default)},
-    "products/purolite-softener-resin/index.html": {size: 107235, hash: "bfb2f31705ee96dc", text: () => import("./assets-chunks/products_purolite-softener-resin_index_html.mjs").then(m => m.default)},
-    "products/sand-filters/index.html": {size: 112785, hash: "dddfdedd8847a7ba", text: () => import("./assets-chunks/products_sand-filters_index_html.mjs").then(m => m.default)},
-    "gallery/index.html": {size: 124468, hash: "dff20d589eaa578a", text: () => import("./assets-chunks/gallery_index_html.mjs").then(m => m.default)},
-    "blog/signs-of-hard-water/index.html": {size: 125552, hash: "1da6d5465ce09be4", text: () => import("./assets-chunks/blog_signs-of-hard-water_index_html.mjs").then(m => m.default)},
-    "blog/iron-in-borewell-water/index.html": {size: 125254, hash: "2e470501043eb14a", text: () => import("./assets-chunks/blog_iron-in-borewell-water_index_html.mjs").then(m => m.default)},
-    "blog/sand-filter-vs-carbon-filter/index.html": {size: 124813, hash: "534e4df123b371f2", text: () => import("./assets-chunks/blog_sand-filter-vs-carbon-filter_index_html.mjs").then(m => m.default)},
-    "calculator/index.html": {size: 103069, hash: "f199b5a0bdd519db", text: () => import("./assets-chunks/calculator_index_html.mjs").then(m => m.default)},
-    "testimonials/index.html": {size: 110495, hash: "d9718e0037578541", text: () => import("./assets-chunks/testimonials_index_html.mjs").then(m => m.default)}
+    "index.csr.html": {size: 18407, hash: "142177ed75a79046", text: () => import("./assets-chunks/index_csr_html.mjs").then(m => m.default)},
+    "index.server.html": {size: 16587, hash: "4d4f722ecdd0018b", text: () => import("./assets-chunks/index_server_html.mjs").then(m => m.default)},
+    "index.html": {size: 262732, hash: "497fc0855d2527f6", text: () => import("./assets-chunks/index_html.mjs").then(m => m.default)},
+    "about/index.html": {size: 115509, hash: "358f8d337e53f978", text: () => import("./assets-chunks/about_index_html.mjs").then(m => m.default)},
+    "products/ro-water-purifiers/index.html": {size: 108074, hash: "743a50c65bcec512", text: () => import("./assets-chunks/products_ro-water-purifiers_index_html.mjs").then(m => m.default)},
+    "products/water-softeners/index.html": {size: 116905, hash: "b23e631c0846f8f6", text: () => import("./assets-chunks/products_water-softeners_index_html.mjs").then(m => m.default)},
+    "services/index.html": {size: 121404, hash: "abb2512cb28288de", text: () => import("./assets-chunks/services_index_html.mjs").then(m => m.default)},
+    "how-it-works/index.html": {size: 111144, hash: "39368aefdd42d153", text: () => import("./assets-chunks/how-it-works_index_html.mjs").then(m => m.default)},
+    "faq/index.html": {size: 104613, hash: "ba3b2ee9a037a49d", text: () => import("./assets-chunks/faq_index_html.mjs").then(m => m.default)},
+    "careers/index.html": {size: 104184, hash: "604d76fa1c9ed7a4", text: () => import("./assets-chunks/careers_index_html.mjs").then(m => m.default)},
+    "contact/index.html": {size: 118227, hash: "60a87713a00661f1", text: () => import("./assets-chunks/contact_index_html.mjs").then(m => m.default)},
+    "blog/water-softener-maintenance-tips/index.html": {size: 126495, hash: "ec9ad12d65eaa876", text: () => import("./assets-chunks/blog_water-softener-maintenance-tips_index_html.mjs").then(m => m.default)},
+    "blog/choosing-the-right-water-softener/index.html": {size: 127439, hash: "1509aa9718a1b623", text: () => import("./assets-chunks/blog_choosing-the-right-water-softener_index_html.mjs").then(m => m.default)},
+    "products/iron-filters/index.html": {size: 110745, hash: "16fb963137b4118d", text: () => import("./assets-chunks/products_iron-filters_index_html.mjs").then(m => m.default)},
+    "products/carbon-filters/index.html": {size: 110840, hash: "914406562d6a6745", text: () => import("./assets-chunks/products_carbon-filters_index_html.mjs").then(m => m.default)},
+    "gallery/index.html": {size: 125970, hash: "93cee7af9589c8b0", text: () => import("./assets-chunks/gallery_index_html.mjs").then(m => m.default)},
+    "blog/signs-of-hard-water/index.html": {size: 127026, hash: "c954d73d4f71d0bd", text: () => import("./assets-chunks/blog_signs-of-hard-water_index_html.mjs").then(m => m.default)},
+    "products/purolite-softener-resin/index.html": {size: 108750, hash: "0b61b0cf945bdcc0", text: () => import("./assets-chunks/products_purolite-softener-resin_index_html.mjs").then(m => m.default)},
+    "products/sand-filters/index.html": {size: 114272, hash: "2be5aa86a3767397", text: () => import("./assets-chunks/products_sand-filters_index_html.mjs").then(m => m.default)},
+    "blog/iron-in-borewell-water/index.html": {size: 126807, hash: "d3b08c61f56e8945", text: () => import("./assets-chunks/blog_iron-in-borewell-water_index_html.mjs").then(m => m.default)},
+    "blog/sand-filter-vs-carbon-filter/index.html": {size: 126358, hash: "8e995b152766915f", text: () => import("./assets-chunks/blog_sand-filter-vs-carbon-filter_index_html.mjs").then(m => m.default)},
+    "calculator/index.html": {size: 104535, hash: "2c3ade283788baa5", text: () => import("./assets-chunks/calculator_index_html.mjs").then(m => m.default)},
+    "testimonials/index.html": {size: 111983, hash: "907e5d4d787f16dd", text: () => import("./assets-chunks/testimonials_index_html.mjs").then(m => m.default)}
   },
 };

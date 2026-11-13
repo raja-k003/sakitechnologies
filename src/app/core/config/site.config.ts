@@ -4,7 +4,7 @@
  * Open Graph URLs, the sitemap and JSON-LD are all derived from it.
  */
 export const SITE = {
-  baseUrl: 'https://sakitechnologies.com',
+  baseUrl: 'https://sakirotech.in',
   name: 'Saki Technologies',
   shortName: 'Saki Technologies',
   legalName: 'Saki Technologies',

@@ -31,13 +31,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Add 404 fallback (unknown URLs load the app, which shows its not-found page)
+        run: cp docs/browser/index.csr.html docs/browser/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # The production build (ng build --configuration production --output-path docs)
+          path: 'docs/browser'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
