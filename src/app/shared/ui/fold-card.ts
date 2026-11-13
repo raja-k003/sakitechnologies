@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, input, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SiteImage } from '../../core/data/images';
 import { Icon } from './icon';
@@ -74,14 +74,19 @@ export class FoldCard {
   readonly points = input<string[]>([]);
 
   protected readonly open = signal(false);
+  private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
 
   protected onEnter(e: PointerEvent): void { if (e.pointerType === 'mouse') this.open.set(true); }
   protected onLeave(e: PointerEvent): void { if (e.pointerType === 'mouse') this.open.set(false); }
   protected onFocusOut(e: FocusEvent): void {
-    const host = e.currentTarget as HTMLElement;
-    if (!host.contains(e.relatedTarget as Node | null)) this.open.set(false);
+    // Only close when focus moves to another element outside the card (Tab away). A null relatedTarget means focus
+    // was simply dropped, e.g. the tapped "View me" button becomes inert as the card opens: that must not close it.
+    const next = e.relatedTarget as Node | null;
+    if (next && !this.host.nativeElement.contains(next)) this.open.set(false);
   }
   protected onDocClick(e: Event): void {
-    if (this.open() && !(e.target as Element | null)?.closest?.('app-fold-card.is-open')) this.open.set(false);
+    // Compare against this card's own element (not the `is-open` class): the class is applied after change
+    // detection, so on the very click that opens the card it is not there yet and the card would close at once.
+    if (this.open() && !this.host.nativeElement.contains(e.target as Node | null)) this.open.set(false);
   }
 }

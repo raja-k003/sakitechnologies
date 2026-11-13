@@ -17,10 +17,12 @@
   max-width: 120rem;
   padding-inline: clamp(1rem, 0.5rem + 1.5vw, 1.5rem);
   display: grid;
+  /* minmax(0, …) stops wide children (the orbit visual) from stretching the column past the viewport */
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(2rem, 1rem + 4vw, 4rem);
   align-items: center;
   /* extra breathing room between the copy and the product visual */
-  @media (min-width: 900px) { grid-template-columns: 1.15fr 0.85fr; column-gap: clamp(4rem, 10vw, 12rem); }
+  @media (min-width: 900px) { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); column-gap: clamp(4rem, 10vw, 12rem); }
 }
 .hero h1 { max-width: 34rem; color: var(--h-ink); }
 /* character-by-character 3D reveal */
@@ -49,6 +51,7 @@
 .hero .eyebrow { border: 1px solid color-mix(in srgb, var(--color-primary) 22%, transparent); }
 
 /* staggered entrance */
+.hero__copy, .hero__media { min-width: 0; }
 .hero__copy > * { animation: hero-in .8s cubic-bezier(.2, .7, .2, 1) both; }
 .hero__copy > :nth-child(2) { animation-delay: .08s; }
 .hero__copy > :nth-child(3) { animation-delay: .16s; }
